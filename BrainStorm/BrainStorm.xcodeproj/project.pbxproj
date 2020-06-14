@@ -1,0 +1,671 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4324615F24881DBB0002BFF4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4324615E24881DBB0002BFF4 /* AppDelegate.swift */; };
+		4324616124881DBB0002BFF4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4324616024881DBB0002BFF4 /* SceneDelegate.swift */; };
+		4324616824881DBC0002BFF4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4324616724881DBC0002BFF4 /* Assets.xcassets */; };
+		4324616B24881DBC0002BFF4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4324616924881DBC0002BFF4 /* LaunchScreen.storyboard */; };
+		4324617624881DBD0002BFF4 /* BrainStormTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4324617524881DBD0002BFF4 /* BrainStormTests.swift */; };
+		4324618124881DBD0002BFF4 /* BrainStormUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4324618024881DBD0002BFF4 /* BrainStormUITests.swift */; };
+		4324618F24881E080002BFF4 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4324618E24881E080002BFF4 /* StartViewController.swift */; };
+		43246191248823E20002BFF4 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43246190248823E20002BFF4 /* Storyboard.storyboard */; };
+		432461932488DA410002BFF4 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432461922488DA410002BFF4 /* CustomButton.swift */; };
+		432461952488E1060002BFF4 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432461942488E1060002BFF4 /* DataModel.swift */; };
+		432461972488E3550002BFF4 /* DataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432461962488E3550002BFF4 /* DataBase.swift */; };
+		432461992488E7A70002BFF4 /* GameTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432461982488E7A70002BFF4 /* GameTableViewController.swift */; };
+		4324619B2488E8000002BFF4 /* GameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4324619A2488E8000002BFF4 /* GameCell.swift */; };
+		432461A4248ADE870002BFF4 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432461A3248ADE870002BFF4 /* Game.swift */; };
+		432461A6248BAB040002BFF4 /* RecordsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432461A5248BAB040002BFF4 /* RecordsTableViewController.swift */; };
+		432461A8248CCA880002BFF4 /* RecordsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432461A7248CCA880002BFF4 /* RecordsCell.swift */; };
+		432461AA248F88E30002BFF4 /* GameSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432461A9248F88E30002BFF4 /* GameSession.swift */; };
+		432461AC248FC8040002BFF4 /* RecordsCaretaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432461AB248FC8040002BFF4 /* RecordsCaretaker.swift */; };
+		432461AE248FF5650002BFF4 /* DateTimeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432461AD248FF5650002BFF4 /* DateTimeHelper.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4324617224881DBD0002BFF4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4324615324881DBB0002BFF4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4324615A24881DBB0002BFF4;
+			remoteInfo = BrainStorm;
+		};
+		4324617D24881DBD0002BFF4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4324615324881DBB0002BFF4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4324615A24881DBB0002BFF4;
+			remoteInfo = BrainStorm;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4324615B24881DBB0002BFF4 /* BrainStorm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BrainStorm.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4324615E24881DBB0002BFF4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4324616024881DBB0002BFF4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		4324616724881DBC0002BFF4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4324616A24881DBC0002BFF4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4324616C24881DBC0002BFF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4324617124881DBD0002BFF4 /* BrainStormTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BrainStormTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4324617524881DBD0002BFF4 /* BrainStormTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrainStormTests.swift; sourceTree = "<group>"; };
+		4324617724881DBD0002BFF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4324617C24881DBD0002BFF4 /* BrainStormUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BrainStormUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4324618024881DBD0002BFF4 /* BrainStormUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrainStormUITests.swift; sourceTree = "<group>"; };
+		4324618224881DBD0002BFF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4324618E24881E080002BFF4 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		43246190248823E20002BFF4 /* Storyboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
+		432461922488DA410002BFF4 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		432461942488E1060002BFF4 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		432461962488E3550002BFF4 /* DataBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBase.swift; sourceTree = "<group>"; };
+		432461982488E7A70002BFF4 /* GameTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTableViewController.swift; sourceTree = "<group>"; };
+		4324619A2488E8000002BFF4 /* GameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCell.swift; sourceTree = "<group>"; };
+		432461A3248ADE870002BFF4 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		432461A5248BAB040002BFF4 /* RecordsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsTableViewController.swift; sourceTree = "<group>"; };
+		432461A7248CCA880002BFF4 /* RecordsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsCell.swift; sourceTree = "<group>"; };
+		432461A9248F88E30002BFF4 /* GameSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSession.swift; sourceTree = "<group>"; };
+		432461AB248FC8040002BFF4 /* RecordsCaretaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsCaretaker.swift; sourceTree = "<group>"; };
+		432461AD248FF5650002BFF4 /* DateTimeHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTimeHelper.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4324615824881DBB0002BFF4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4324616E24881DBD0002BFF4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4324617924881DBD0002BFF4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4324615224881DBB0002BFF4 = {
+			isa = PBXGroup;
+			children = (
+				4324615D24881DBB0002BFF4 /* BrainStorm */,
+				4324617424881DBD0002BFF4 /* BrainStormTests */,
+				4324617F24881DBD0002BFF4 /* BrainStormUITests */,
+				4324615C24881DBB0002BFF4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4324615C24881DBB0002BFF4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4324615B24881DBB0002BFF4 /* BrainStorm.app */,
+				4324617124881DBD0002BFF4 /* BrainStormTests.xctest */,
+				4324617C24881DBD0002BFF4 /* BrainStormUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4324615D24881DBB0002BFF4 /* BrainStorm */ = {
+			isa = PBXGroup;
+			children = (
+				432461A0248936420002BFF4 /* Customview */,
+				4324619F2489361F0002BFF4 /* Database */,
+				4324619E248932060002BFF4 /* Models */,
+				4324619D24892D960002BFF4 /* Cells */,
+				4324619C24892D690002BFF4 /* Controllers */,
+				43246190248823E20002BFF4 /* Storyboard.storyboard */,
+				4324615E24881DBB0002BFF4 /* AppDelegate.swift */,
+				4324616024881DBB0002BFF4 /* SceneDelegate.swift */,
+				4324616724881DBC0002BFF4 /* Assets.xcassets */,
+				4324616924881DBC0002BFF4 /* LaunchScreen.storyboard */,
+				4324616C24881DBC0002BFF4 /* Info.plist */,
+				432461A3248ADE870002BFF4 /* Game.swift */,
+				432461A9248F88E30002BFF4 /* GameSession.swift */,
+				432461AB248FC8040002BFF4 /* RecordsCaretaker.swift */,
+				432461AD248FF5650002BFF4 /* DateTimeHelper.swift */,
+			);
+			path = BrainStorm;
+			sourceTree = "<group>";
+		};
+		4324617424881DBD0002BFF4 /* BrainStormTests */ = {
+			isa = PBXGroup;
+			children = (
+				4324617524881DBD0002BFF4 /* BrainStormTests.swift */,
+				4324617724881DBD0002BFF4 /* Info.plist */,
+			);
+			path = BrainStormTests;
+			sourceTree = "<group>";
+		};
+		4324617F24881DBD0002BFF4 /* BrainStormUITests */ = {
+			isa = PBXGroup;
+			children = (
+				4324618024881DBD0002BFF4 /* BrainStormUITests.swift */,
+				4324618224881DBD0002BFF4 /* Info.plist */,
+			);
+			path = BrainStormUITests;
+			sourceTree = "<group>";
+		};
+		4324619C24892D690002BFF4 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				432461982488E7A70002BFF4 /* GameTableViewController.swift */,
+				4324618E24881E080002BFF4 /* StartViewController.swift */,
+				432461A5248BAB040002BFF4 /* RecordsTableViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		4324619D24892D960002BFF4 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				4324619A2488E8000002BFF4 /* GameCell.swift */,
+				432461A7248CCA880002BFF4 /* RecordsCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		4324619E248932060002BFF4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				432461942488E1060002BFF4 /* DataModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		4324619F2489361F0002BFF4 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				432461962488E3550002BFF4 /* DataBase.swift */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		432461A0248936420002BFF4 /* Customview */ = {
+			isa = PBXGroup;
+			children = (
+				432461922488DA410002BFF4 /* CustomButton.swift */,
+			);
+			path = Customview;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4324615A24881DBB0002BFF4 /* BrainStorm */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4324618524881DBD0002BFF4 /* Build configuration list for PBXNativeTarget "BrainStorm" */;
+			buildPhases = (
+				4324615724881DBB0002BFF4 /* Sources */,
+				4324615824881DBB0002BFF4 /* Frameworks */,
+				4324615924881DBB0002BFF4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BrainStorm;
+			productName = BrainStorm;
+			productReference = 4324615B24881DBB0002BFF4 /* BrainStorm.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4324617024881DBD0002BFF4 /* BrainStormTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4324618824881DBD0002BFF4 /* Build configuration list for PBXNativeTarget "BrainStormTests" */;
+			buildPhases = (
+				4324616D24881DBD0002BFF4 /* Sources */,
+				4324616E24881DBD0002BFF4 /* Frameworks */,
+				4324616F24881DBD0002BFF4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4324617324881DBD0002BFF4 /* PBXTargetDependency */,
+			);
+			name = BrainStormTests;
+			productName = BrainStormTests;
+			productReference = 4324617124881DBD0002BFF4 /* BrainStormTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		4324617B24881DBD0002BFF4 /* BrainStormUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4324618B24881DBD0002BFF4 /* Build configuration list for PBXNativeTarget "BrainStormUITests" */;
+			buildPhases = (
+				4324617824881DBD0002BFF4 /* Sources */,
+				4324617924881DBD0002BFF4 /* Frameworks */,
+				4324617A24881DBD0002BFF4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4324617E24881DBD0002BFF4 /* PBXTargetDependency */,
+			);
+			name = BrainStormUITests;
+			productName = BrainStormUITests;
+			productReference = 4324617C24881DBD0002BFF4 /* BrainStormUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4324615324881DBB0002BFF4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = "Alex Larin";
+				TargetAttributes = {
+					4324615A24881DBB0002BFF4 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					4324617024881DBD0002BFF4 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = 4324615A24881DBB0002BFF4;
+					};
+					4324617B24881DBD0002BFF4 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = 4324615A24881DBB0002BFF4;
+					};
+				};
+			};
+			buildConfigurationList = 4324615624881DBB0002BFF4 /* Build configuration list for PBXProject "BrainStorm" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4324615224881DBB0002BFF4;
+			productRefGroup = 4324615C24881DBB0002BFF4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4324615A24881DBB0002BFF4 /* BrainStorm */,
+				4324617024881DBD0002BFF4 /* BrainStormTests */,
+				4324617B24881DBD0002BFF4 /* BrainStormUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4324615924881DBB0002BFF4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4324616B24881DBC0002BFF4 /* LaunchScreen.storyboard in Resources */,
+				43246191248823E20002BFF4 /* Storyboard.storyboard in Resources */,
+				4324616824881DBC0002BFF4 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4324616F24881DBD0002BFF4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4324617A24881DBD0002BFF4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4324615724881DBB0002BFF4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				432461AC248FC8040002BFF4 /* RecordsCaretaker.swift in Sources */,
+				432461972488E3550002BFF4 /* DataBase.swift in Sources */,
+				432461A8248CCA880002BFF4 /* RecordsCell.swift in Sources */,
+				432461A4248ADE870002BFF4 /* Game.swift in Sources */,
+				432461952488E1060002BFF4 /* DataModel.swift in Sources */,
+				432461932488DA410002BFF4 /* CustomButton.swift in Sources */,
+				4324619B2488E8000002BFF4 /* GameCell.swift in Sources */,
+				4324615F24881DBB0002BFF4 /* AppDelegate.swift in Sources */,
+				4324616124881DBB0002BFF4 /* SceneDelegate.swift in Sources */,
+				4324618F24881E080002BFF4 /* StartViewController.swift in Sources */,
+				432461AE248FF5650002BFF4 /* DateTimeHelper.swift in Sources */,
+				432461A6248BAB040002BFF4 /* RecordsTableViewController.swift in Sources */,
+				432461AA248F88E30002BFF4 /* GameSession.swift in Sources */,
+				432461992488E7A70002BFF4 /* GameTableViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4324616D24881DBD0002BFF4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4324617624881DBD0002BFF4 /* BrainStormTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4324617824881DBD0002BFF4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4324618124881DBD0002BFF4 /* BrainStormUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4324617324881DBD0002BFF4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4324615A24881DBB0002BFF4 /* BrainStorm */;
+			targetProxy = 4324617224881DBD0002BFF4 /* PBXContainerItemProxy */;
+		};
+		4324617E24881DBD0002BFF4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4324615A24881DBB0002BFF4 /* BrainStorm */;
+			targetProxy = 4324617D24881DBD0002BFF4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4324616924881DBC0002BFF4 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4324616A24881DBC0002BFF4 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4324618324881DBD0002BFF4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4324618424881DBD0002BFF4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4324618624881DBD0002BFF4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = H8D2UQ584W;
+				INFOPLIST_FILE = BrainStorm/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = AlexLarin.BrainStorm;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4324618724881DBD0002BFF4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = H8D2UQ584W;
+				INFOPLIST_FILE = BrainStorm/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = AlexLarin.BrainStorm;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		4324618924881DBD0002BFF4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = H8D2UQ584W;
+				INFOPLIST_FILE = BrainStormTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = AlexLarin.BrainStormTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BrainStorm.app/BrainStorm";
+			};
+			name = Debug;
+		};
+		4324618A24881DBD0002BFF4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = H8D2UQ584W;
+				INFOPLIST_FILE = BrainStormTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = AlexLarin.BrainStormTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BrainStorm.app/BrainStorm";
+			};
+			name = Release;
+		};
+		4324618C24881DBD0002BFF4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = H8D2UQ584W;
+				INFOPLIST_FILE = BrainStormUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = AlexLarin.BrainStormUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BrainStorm;
+			};
+			name = Debug;
+		};
+		4324618D24881DBD0002BFF4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = H8D2UQ584W;
+				INFOPLIST_FILE = BrainStormUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = AlexLarin.BrainStormUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BrainStorm;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4324615624881DBB0002BFF4 /* Build configuration list for PBXProject "BrainStorm" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4324618324881DBD0002BFF4 /* Debug */,
+				4324618424881DBD0002BFF4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4324618524881DBD0002BFF4 /* Build configuration list for PBXNativeTarget "BrainStorm" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4324618624881DBD0002BFF4 /* Debug */,
+				4324618724881DBD0002BFF4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4324618824881DBD0002BFF4 /* Build configuration list for PBXNativeTarget "BrainStormTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4324618924881DBD0002BFF4 /* Debug */,
+				4324618A24881DBD0002BFF4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4324618B24881DBD0002BFF4 /* Build configuration list for PBXNativeTarget "BrainStormUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4324618C24881DBD0002BFF4 /* Debug */,
+				4324618D24881DBD0002BFF4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4324615324881DBB0002BFF4 /* Project object */;
+}
