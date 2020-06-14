@@ -14,6 +14,7 @@ class RecordsCell: UITableViewCell {
     
     @IBOutlet weak var RecordLabel: UILabel!
     
+    @IBOutlet weak var SuccessLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -23,7 +24,5 @@ class RecordsCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-      
     }
-
 }

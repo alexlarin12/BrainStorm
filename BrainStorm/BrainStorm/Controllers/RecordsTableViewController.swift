@@ -29,7 +29,8 @@ class RecordsTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "RecordCell", for: indexPath) as! RecordsCell
         let record = Game.shared.records[indexPath.row]
         let dateFormatter = DateTimeHelper()
-        cell.RecordLabel.text = "\(record.score)"
+        cell.RecordLabel.text = "\(record.score) руб"
+        cell.SuccessLabel.text = "\(record.success)%"
         cell.DateRecordLabel.text = dateFormatter.getFormattedDate(indexPath: indexPath, from: record.date)
         return cell
     }

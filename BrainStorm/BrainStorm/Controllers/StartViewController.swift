@@ -9,8 +9,7 @@
 import UIKit
 
 class StartViewController: UIViewController {
-    let dataBase = DataBase()
-   
+    var difficulty: Difficulty = .serial
     
     @IBOutlet weak var BrainStormLabel: UILabel!
     @IBOutlet weak var LastResult: UILabel!
@@ -36,8 +35,7 @@ extension StartViewController: GameViewControllerDelegate{
     func didEndGame(withResult result: Int) {
         self.dismiss(animated: true, completion: nil)
         LastResult.text = "You win: \(result)"
-        print(Game.shared.records)
-       
+      
     }
     
 }
