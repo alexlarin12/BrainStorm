@@ -7,14 +7,14 @@
 //
 
 import Foundation
-struct Ask {
+struct Ask:Codable {
     let question: String
     let coast: Int
-    let answers:[Answers]
+    var answers:[Answers]
 }
-struct Answers {
-    let answer: String
-    let correctAnswer: Bool
+struct Answers:Codable {
+    var answer: String
+    var correctAnswer: Bool
 }
 struct Record: Codable {
     let date: Date

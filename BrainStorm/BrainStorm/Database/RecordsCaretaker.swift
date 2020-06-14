@@ -13,8 +13,8 @@ final class RecordsCaretaker {
     private let encoder = JSONEncoder()
     private let decoder = JSONDecoder()
     
-    private let key = "records"
-    
+    private let key = "record"
+    // кодирование в формат Data и сохранение сессии в базу данных:
     func save(records: [GameSession]) {
         do {
             let data = try self.encoder.encode(records)
@@ -23,7 +23,7 @@ final class RecordsCaretaker {
             print(error)
         }
     }
-    
+    // выгрузка сессии из базы данных и декодирование:
     func retrieveRecords() -> [GameSession] {
         guard let data = UserDefaults.standard.data(forKey: key) else {
             return []

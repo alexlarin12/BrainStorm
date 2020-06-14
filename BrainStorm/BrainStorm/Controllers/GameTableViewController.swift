@@ -13,9 +13,16 @@ protocol GameViewControllerDelegate: class {
 
 class GameTableViewController: UITableViewController {
     let dataBase = DataBase()
+    var questions:[Ask] = []
     var numberAsk = 0
+    var questionNumber = Observable<Int>(0)
+    var success = Observable<Float>(0)
     var result = 0
+    var questionManager: QuestionManager = SerialQuestionManager()
     
+    @IBOutlet weak var QuestionNumber: UILabel!
+    
+    @IBOutlet weak var SuccessLabel: UILabel!
     
     @IBAction func ClearRecordsAction(_ sender: Any) {
         let alert = UIAlertController(title: "Are you sure?", message: "Delete All Records", preferredStyle: .alert)
@@ -25,41 +32,52 @@ class GameTableViewController: UITableViewController {
         }
         alert.addAction(action)
         present(alert, animated: true)
-        
     }
-    
-   
     
     // свойство для хранения ссылки
     weak var gameDelegate: GameViewControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        questionManager = Game.shared.questionManager
+        questions = questionManager.nextQuestion() ?? []
+        // наблюдатель за изменением номера вопроса:
+        self.questionNumber.addObserver(self, options: [.new, .initial],closure: {questionNumber, change in
+            self.QuestionNumber.text = "\(questionNumber + 1)"
+        })
+        self.success.addObserver(self, options: [.new, .initial],closure: {success, change in
+            // переводим в Int чтобы убрать лишнии цифры после запятой:
+            let intSuccess = Int(success)
+            self.SuccessLabel.text = "\(intSuccess)%"
+        })
     }
     // метод выполняемый при правильном ответе:
-    func ifRightAnswer(result: Int){
+    func ifRightAnswer(result: Int, countRightAnswers: Int){
         var finishResult = 0
         let alert = UIAlertController(title: "Success!", message: "Correct answer", preferredStyle: .alert)
         let action = UIAlertAction(title: "Ok", style: .default) { _ in
-            if self.numberAsk == self.dataBase.ask.count {
+            self.questionNumber.value = self.numberAsk
+            if self.numberAsk == self.questions.count {
                 self.numberAsk -= 1
-                let record = GameSession(countRightAnswers: 10, score: self.result, date: Date())
+                self.questionNumber.value = self.numberAsk
+                self.success.value = Float(countRightAnswers)/Float(self.questions.count)*100
+                let record = GameSession(countQuestions: self.questions.count,countRightAnswers: countRightAnswers, success: self.success.value, score: self.result, date: Date())
                 Game.shared.addRecord(record)
                 
                 // оповещаем делегат что игра закончена:
                 self.gameDelegate?.didEndGame(withResult: result)
             }
-            
+            self.success.value = Float(countRightAnswers)/Float(self.questions.count)*100
             self.tableView.reloadData()
         }
         
         finishResult += result
-        print(" finish \(finishResult)")
         
-        numberAsk = numberAsk + 1
         alert.addAction(action)
         present(alert, animated: true)
+        
+        numberAsk = numberAsk + 1
+        
     }
     // метод выполняемый при неправильном ответе:
     func ifWrondAnswer(result: Int){
@@ -85,7 +103,8 @@ class GameTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return dataBase.ask[numberAsk].answers.count
+        // return dataBase.ask[numberAsk].answers.count
+        return questions[numberAsk].answers.count
     }
     // метод установки высоты header
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
@@ -95,12 +114,12 @@ class GameTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let view = UIView()
         
-        view.backgroundColor = #colorLiteral(red: 0.2392156863, green: 0.4039215686, blue: 0.7019607843, alpha: 1)
+        view.backgroundColor = #colorLiteral(red: 0.3459618092, green: 0.3377969265, blue: 0.8411403298, alpha: 1)
         let label = UILabel()
         let titleLable = UILabel()
-        titleLable.text = "Вопрос на \(dataBase.ask[numberAsk].coast) рублей:"
+        titleLable.text = "Вопрос на \(questions[numberAsk].coast) рублей:"
         titleLable.textAlignment = .center
-        label.text = dataBase.ask[numberAsk].question
+        label.text = questions[numberAsk].question
         label.textAlignment = .center
         let width = tableView.frame.width - 20
         label.frame = CGRect(x: 10, y: 0, width: width, height: 150)
@@ -108,7 +127,7 @@ class GameTableViewController: UITableViewController {
         label.numberOfLines = 0
         label.textColor = UIColor.white
         titleLable.textColor = UIColor.white
-        label.backgroundColor = #colorLiteral(red: 0.2392156863, green: 0.4039215686, blue: 0.7019607843, alpha: 1)
+        label.backgroundColor = #colorLiteral(red: 0.3459618092, green: 0.3377969265, blue: 0.8411403298, alpha: 1)
         view.addSubview(label)
         view.addSubview(titleLable)
         return view
@@ -120,23 +139,23 @@ class GameTableViewController: UITableViewController {
         let titleCharArray = ["A:","B:","C:","D:"]
         let titleChar = titleCharArray[indexPath.row]
         cell.TitleCharLabel.text = titleChar
-        let answer = dataBase.ask[numberAsk].answers[indexPath.row].answer
+        let answer = questions[numberAsk].answers[indexPath.row].answer
         cell.answerLabel.text = answer
         
         return cell
     }
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let result1 = dataBase.ask[self.numberAsk].coast
-        if dataBase.ask[numberAsk].answers[indexPath.row].correctAnswer == false {
+        let result1 = questions[self.numberAsk].coast
+        if questions[numberAsk].answers[indexPath.row].correctAnswer == false {
             self.result = self.result + 0
-            // let record = Record(date: Date(), score: self.result)
-            let record = GameSession(countRightAnswers: 10, score: self.result, date: Date())
+            self.success.value = Float(Double(numberAsk)/Double(self.questions.count)*100)
+            let record = GameSession(countQuestions: self.questions.count,countRightAnswers: numberAsk,success: success.value, score: self.result, date: Date())
             Game.shared.addRecord(record)
             ifWrondAnswer(result: result)
         }else{
             self.result = self.result + result1
             
-            ifRightAnswer(result: result)
+            ifRightAnswer(result: result, countRightAnswers: numberAsk + 1)
         }
     }
 }

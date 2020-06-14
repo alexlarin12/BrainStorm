@@ -9,11 +9,11 @@
 import UIKit
 class CustomButton: UIButton {
 
-var color: UIColor = #colorLiteral(red: 0.239143461, green: 0.437407434, blue: 0.7932939529, alpha: 1)
+var color: UIColor = #colorLiteral(red: 0.3459618092, green: 0.3377969265, blue: 0.8411403298, alpha: 1)
   let touchDownAlpha: CGFloat = 0.3
 
   func setup() {
-    backgroundColor = .gray
+    backgroundColor = .white
       layer.backgroundColor = color.cgColor
       layer.cornerRadius = 6
       clipsToBounds = true

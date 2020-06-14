@@ -9,13 +9,16 @@
 import Foundation
 
 class GameSession: Codable {
-    
+    var countQuestions: Int // количество вопросов в игре
     var countRightAnswers: Int // количество правильных ответов
+    var success: Float // процент правильных ответов от общего числа
     var score: Int // выигрыш
-    var date: Date
+    var date: Date // дата игры
     
-    init(countRightAnswers: Int, score: Int, date: Date) {
+    init(countQuestions: Int,countRightAnswers: Int,success: Float, score: Int, date: Date) {
+        self.countQuestions = countQuestions
         self.countRightAnswers = countRightAnswers
+        self.success = success
         self.score = score
         self.date = date
     }
